@@ -829,13 +829,13 @@ async def role(ctx):
 
 @bot.command()
 async def 질문(ctx, *, question):
-    thinking = await ctx.send("🤔 강철봇이 생각 중...")
+    thinking = await ctx.send("🤔 강민봇이 생각 중...")
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": question}]
     )
     answer = response.choices[0].message.content.strip()
-    embed = discord.Embed(title="🤖 강철봇의 답변", description=answer, color=discord.Color.blue())
+    embed = discord.Embed(title="🤖 강민봇의 답변", description=answer, color=discord.Color.blue())
     embed.set_footer(text=f"질문자: {ctx.author.display_name}")
     await thinking.delete()
     await ctx.send(embed=embed)
