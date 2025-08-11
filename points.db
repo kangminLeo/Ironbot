@@ -1,0 +1,32 @@
+SQLite format 3@        .c
+D
+ j
+
+  735tableafk_watchafk_watcCREATE TABLE afk_watch(
+  guild_id INTEGER NOT NULL,
+  user_id  INTEGER NOT NULL,
+  last_active INTEGER NOT NULL,
+  PRIMARY KEY(guild_id, user_id)
+)Eindexsqlite_autoindex_afk_watch_1afk_watch    W''mtablepurchases_newpurchases_newCREATE TABLE purchases_new(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  guild_id INTEGER NOT NULL,
+  user_id INTEGER NOT NULL,
+  item_id INTEGER NOT NULL,
+  ts INTEGER NOT NULL
+)P++Ytablesqlite_sequencesqlite_sequenceCREATE TABLE sqlite_sequence(name,seq).?tableshopshopCREATE TABLE shop(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  guild_id INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  price INTEGER NOT NULL,
+  stock INTEGER
+)));tableguild_settingsguild_settingsCREATE TABLE guild_settings(
+  guild_id INTEGER PRIMARY KEY,
+  afk_channel_id INTEGER
+)x?tableusers_newusers_newCREATE TABLE users_new(
+  guild_id INTEGER NOT NULL,
+  user_id  INTEGER NOT NULL,
+  points   INTEGER NOT NULL DEFAULT 0,
+  carry_sec INTEGER NOT NULL DEFAULT 0,
+  last_join INTEGER,
+  PRIMARY KEY (guild_id, user_id)
+)1Eindexsqlite_autoindex_users_new_1users_new
