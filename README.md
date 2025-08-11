@@ -1,2 +1,1 @@
-# Ironbot
-Custom Iron bot
+# Kangminbot
